@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+
+        #blog {
+            width: max-content;
+            padding: 20px;
+            margin-left: 470px;
+            margin-top: 40px;
+            font-size: 20px;
+            text-align: center;
+            background-color: bisque;
+        }
+        #blog h3{
+            font-size: 30px;
+            text-transform: uppercase;
+            padding: 20px 0px;
+        }
+        #blog p {
+            font-size: 20px;
+            padding: 10px 0px;
+            text-transform: capitalize;
+        }
+        #blog a{
+            text-decoration: none;
+            padding: 3px 15px;
+            background-color: blue;
+            color: azure;
+        }
+
+        #blog button{
+            padding: 8px 12px;
+            margin-top: 8px;
+            background-color: blue;
+            color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include("nav") %>
+
+        <div id="blog">
+            <img src="<%= singleBlog.img %>" alt="<%= singleBlog.title %>" id="img">
+            <h3 id="title">Title :- <%= singleBlog.title %>
+            </h3>
+            <p id="content">Content :- <%= singleBlog.content %>
+            </p>
+            <p id="createdAt">Date :- <%= singleBlog.createdAt.toLocaleDateString()%>
+            </p>
+
+            <a href="/blog/<%= singleBlog._id %>/edit">Edit</a>
+
+            <form action="/blog/<%= singleBlog._id %>?_method=DELETE" method="post">
+                <button>Delete</button>
+            </form>
+
+        </div>
+</body>
+<script>
+</script>
+
+</html>

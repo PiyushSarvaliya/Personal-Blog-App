@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Form</title>
+</head>
+<body>
+    
+    <div class="content">
+        <h3>Edit Your Blog</h3>
+        <form method="post" action="/blog/<%= singleBlog._id %>?_method=PATCH"  >
+          <div class="field">
+            <input type="text" name="title" id="title" required  placeholder="title" value="<%= singleBlog.title %>"/>
+          </div>
+  
+          <div class="field">
+            <input name="content" id="content" placeholder="content" value="<%= singleBlog.content %>" required ></input>
+          </div>
+  
+          <div class="field">
+            <input type="url" name="img" placeholder="image"  value="<%= singleBlog.img %>">
+          </div>
+  
+          <div class="field">
+            <button type="submit" class="btn">Submit</button>
+          </div>
+          
+        </form>
+      </div>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        form{
+            width: max-content;
+            height: max-content;
+            background-color: gray;
+            padding: 35px;
+            text-align: center;
+            border: 2px solid black;
+            margin-left: 500px;
+            margin-top: 20px;
+        }
+        form input{
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <%- include("nav") %>
+    <form action="/user/login" method="post" id="form">
+        <h1>Login</h1>
+        <input type="email" name="email" id="email" placeholder="email"><br><br>
+        <input type="text" name="password" id="password" placeholder="password"><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

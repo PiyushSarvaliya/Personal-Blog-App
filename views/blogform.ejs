@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: max-content;
+            height: max-content;
+            background-color: gray;
+            padding: 35px;
+            text-align: center;
+            border: 2px solid black;
+            margin-left: 500px;
+        }
+        form input{
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        form textarea{
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <%- include("nav") %> <br><br>
+    <form action="/blog/createblog" method="post">
+        <h1>Add Blog</h1>
+        <input type="url" name="img" id="" placeholder="enter img url"> <br><br>
+        <input type="text" name="title" placeholder="enter title"><br><br>
+        <textarea name="content" id="" placeholder="enter content"></textarea><br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
